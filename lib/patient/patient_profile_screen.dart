@@ -229,7 +229,18 @@ class _PatientReportsPageState extends State<PatientReportsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-           
+             floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return CheckDiseases();
+          }));
+        },
+        child: Container(
+          height: 30,
+          width: 30,
+          child: Icon(Icons.person_search_sharp),
+        ),
+      ),
       body: StreamBuilder<QuerySnapshot>(
         stream: FirebaseFirestore.instance
             .collection('patients')
