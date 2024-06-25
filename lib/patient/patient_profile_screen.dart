@@ -10,6 +10,7 @@ import 'package:flutter_animator/widgets/sliding_entrances/slide_in_up.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:intl/intl.dart';
+import 'package:medical_app/ai_screen/check_diseases_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -228,6 +229,7 @@ class _PatientReportsPageState extends State<PatientReportsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+           
       body: StreamBuilder<QuerySnapshot>(
         stream: FirebaseFirestore.instance
             .collection('patients')
