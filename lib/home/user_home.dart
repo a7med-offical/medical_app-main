@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:medical_app/ai_screen/check_diseases_screen.dart';
 import 'package:medical_app/chat/user_chat_list.dart';
 import 'package:medical_app/patient/notification_screen.dart';
 import 'package:medical_app/patient/patient_profile_screen.dart';
@@ -31,18 +30,6 @@ class _UserHomeState extends State<UserHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return CheckDiseases();
-          }));
-        },
-        child: Container(
-          height: 30,
-          width: 30,
-          child: Icon(Icons.person_search_sharp),
-        ),
-      ),
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
